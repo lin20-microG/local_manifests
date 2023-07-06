@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="Gitlab" fetch="https://gitlab.com" />
+
+  <!-- Patches & root-scripts Directory 
+  <project path="z_patches" name="lin19-microG/z_patches" />
+  <project path="z_patches/croot_scripts" name="lin19-microG/croot_scripts" revision="master" />
+  -->
+
+  <!-- Static OTA updater resource 
+  <project path="OTA" name="lin19-microG/OTA" revision="changelog" />
+  -->
+
+  <!-- microG Build, prebuilt apks -->
+  <project path="prebuilts/prebuiltapks" name="MSe1969/android_prebuilts_prebuiltapks" revision="12L" />
+
+  <!-- Mulch webview: Replaces LineageOS webview -->
+  <remove-project name="LineageOS/android_external_chromium-webview_patches" />
+  <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm" />
+  <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm64" />
+  <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86" />
+  <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86_64" />
+  <project name="divested-mobile/mulch" path="external/Mulch" remote="Gitlab" revision="master" />
+
+  <!-- AuroraStore prebuilt-->
+  <project path="prebuilts/AuroraStore" name="MSe1969/AuroraStore-prebuilt" revision="12L" />
+
+  <!-- GrapheneOS hardened malloc -->
+  <project path="external/hardened_malloc" name="lin20-microG/hardened_malloc" revision= "main" />
+
+  <!-- Replaced/enhanced Repositories -->
+  <remove-project name="LineageOS/android_build" />
+  <project path="build/make" name="lin20-microG/android_build_make" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <remove-project name="LineageOS/android_build_soong" />
+  <project path="build/soong" name="lin20-microG/android_build_soong" groups="pdk,tradefed" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <remove-project name="LineageOS/android_bionic" />
+  <project path="bionic" name="lin20-microG/android_bionic" groups="pdk" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="lin20-microG/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
+  <remove-project name="LineageOS/android_frameworks_native" />
+  <project path="frameworks/native" name="lin20-microG/android_frameworks_native" groups="pdk" />
+  <remove-project name="LineageOS/android_libcore" />
+  <project path="libcore" name="lin20-microG/android_libcore" groups="pdk" />
+  <remove-project name="LineageOS/android_packages_apps_Jelly" />
+  <project path="packages/apps/Jelly" name="lin20-microG/android_packages_apps_Jelly" />
+  <remove-project name="LineageOS/android_packages_apps_LineageParts" />
+  <project path="packages/apps/LineageParts" name="lin20-microG/android_packages_apps_LineageParts" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="lin20-microG/android_packages_apps_Settings" groups="pdk-fs" />
+  <!--
+  <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
+  <project path="packages/apps/Trebuchet" name="lin19-microG/android_packages_apps_Trebuchet" />
+  <remove-project name="LineageOS/android_packages_modules_Connectivity" />
+  <project path="packages/modules/Connectivity" name="lin19-microG/android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" /-->
+  <remove-project name="platform/packages/modules/DnsResolver" />
+  <project path="packages/modules/DnsResolver" name="lin20-microG/android_packages_modules_DnsResolver" groups="pdk-cw-fs,pdk-fs" />
+  <!--
+  <remove-project name="platform/packages/modules/NetworkStack" />
+  <project path="packages/modules/NetworkStack" name="lin19-microG/android_packages_modules_NetworkStack" groups="pdk-cw-fs,pdk-fs" /-->
+  <remove-project name="LineageOS/android_packages_modules_Permission" />
+  <project path="packages/modules/Permission" name="lin20-microG/android_packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" />
+  <remove-project name="LineageOS/android_packages_modules_Wifi" />
+  <project path="packages/modules/Wifi" name="lin20-microG/android_packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs" />
+  <!--
+  <remove-project name="LineageOS/android_packages_providers_MediaProvider" />
+  <project path="packages/providers/MediaProvider" name="lin19-microG/android_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" /-->
+  <remove-project name="LineageOS/android_system_core" />
+  <project path="system/core" name="lin20-microG/android_system_core" groups="pdk" />
+  <remove-project name="LineageOS/android_system_sepolicy" />
+  <project path="system/sepolicy" name="lin20-microG/android_system_sepolicy" groups="pdk" />
+  <remove-project name="LineageOS/android_vendor_lineage" />
+  <project path="vendor/lineage" name="lin20-microG/android_vendor_lineage" />
+</manifest>
