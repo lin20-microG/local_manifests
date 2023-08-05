@@ -52,6 +52,10 @@
   <project path="frameworks/native" name="lin20-microG/android_frameworks_native" groups="pdk" />
   <remove-project name="LineageOS/android_libcore" />
   <project path="libcore" name="lin20-microG/android_libcore" groups="pdk" />
+  <remove-project name="LineageOS/android_packages_apps_Contacts" />
+  <project path="packages/apps/Contacts" name="lin20-microG/android_packages_apps_Contacts" groups="pdk-fs" />
+  <remove-project name="LineageOS/android_packages_apps_DocumentsUI" />
+  <project path="packages/apps/DocumentsUI" name="lin20-microG/android_packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" />
   <remove-project name="LineageOS/android_packages_apps_Jelly" />
   <project path="packages/apps/Jelly" name="lin20-microG/android_packages_apps_Jelly" />
   <remove-project name="LineageOS/android_packages_apps_LineageParts" />
@@ -60,20 +64,18 @@
   <project path="packages/apps/Settings" name="lin20-microG/android_packages_apps_Settings" groups="pdk-fs" />
   <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
   <project path="packages/apps/Trebuchet" name="lin20-microG/android_packages_apps_Trebuchet" />
-  <!--
-  <remove-project name="LineageOS/android_packages_modules_Connectivity" />
-  <project path="packages/modules/Connectivity" name="lin19-microG/android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" /-->
   <remove-project name="platform/packages/modules/DnsResolver" />
   <project path="packages/modules/DnsResolver" name="lin20-microG/android_packages_modules_DnsResolver" groups="pdk-cw-fs,pdk-fs" />
-  <!--
-  <remove-project name="platform/packages/modules/NetworkStack" />
-  <project path="packages/modules/NetworkStack" name="lin19-microG/android_packages_modules_NetworkStack" groups="pdk-cw-fs,pdk-fs" /-->
   <remove-project name="LineageOS/android_packages_modules_Permission" />
   <project path="packages/modules/Permission" name="lin20-microG/android_packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" />
   <remove-project name="LineageOS/android_packages_modules_Wifi" />
   <project path="packages/modules/Wifi" name="lin20-microG/android_packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs" />
+  <remove-project name="LineageOS/android_packages_providers_ContactsProvider" />
+  <project path="packages/providers/ContactsProvider" name="lin20-microG/android_packages_providers_ContactsProvider" groups="pdk-cw-fs,pdk-fs" />
   <remove-project name="LineageOS/android_packages_providers_MediaProvider" />
   <project path="packages/providers/MediaProvider" name="lin20-microG/android_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" />
+  <remove-project name="LineageOS/android_packages_services_Telephony" />
+  <project path="packages/services/Telephony" name="lin20-microG/android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" />
   <remove-project name="LineageOS/android_system_core" />
   <project path="system/core" name="lin20-microG/android_system_core" groups="pdk" />
   <remove-project name="LineageOS/android_system_sepolicy" />
