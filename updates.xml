@@ -65,7 +65,7 @@
   <project path="packages/apps/Settings" name="lin20-microG/android_packages_apps_Settings" groups="pdk-fs" revision="lin-20.0-microG" />
   <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
   <project path="packages/apps/Trebuchet" name="lin20-microG/android_packages_apps_Trebuchet" revision="lin-20.0-microG" />
-  <remove-project name="platform/packages/modules/DnsResolver" />
+  <remove-project name="LineageOS/android_packages_modules_DnsResolver" />
   <project path="packages/modules/DnsResolver" name="lin20-microG/android_packages_modules_DnsResolver" groups="pdk-cw-fs,pdk-fs" revision="lin-20.0-microG" />
   <remove-project name="LineageOS/android_packages_modules_Permission" />
   <project path="packages/modules/Permission" name="lin20-microG/android_packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" revision="lin-20.0-microG" />
