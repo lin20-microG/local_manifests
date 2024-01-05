@@ -54,8 +54,6 @@
   <remove-project name="LineageOS/android_packages_apps_Contacts" />
   <project path="packages/apps/Contacts" name="lin20-microG/android_packages_apps_Contacts" groups="pdk-fs" />
   <remove-project name="LineageOS/android_packages_apps_DocumentsUI" />
-  <remove-project name="LineageOS/android_packages_apps_Dialer" />
-  <project path="packages/apps/Dialer" name="lin20-microG/android_packages_apps_Dialer" groups="pdk-fs" />
   <project path="packages/apps/DocumentsUI" name="lin20-microG/android_packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" />
   <remove-project name="LineageOS/android_packages_apps_Jelly" />
   <project path="packages/apps/Jelly" name="lin20-microG/android_packages_apps_Jelly" />
