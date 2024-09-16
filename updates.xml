@@ -45,6 +45,8 @@
   </project>
   <remove-project name="LineageOS/android_bionic" />
   <project path="bionic" name="lin20-microG/android_bionic" groups="pdk" />
+  <remove-project name="platform/external/expat" />
+  <project path="external/expat" name="lin20-microG/android_external_expat" groups="pdk" revision="lineage-20.0" />
   <remove-project name="LineageOS/android_frameworks_base" />
   <project path="frameworks/base" name="lin20-microG/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
   <remove-project name="LineageOS/android_frameworks_native" />
