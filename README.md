@@ -29,7 +29,7 @@ Copy and execute the scripts as shown below.
 **IMPORTANT:** `repo sync` performs a checkout without branch (detached state). 
 The below scripts perform a 'real' checkout and will create the branch to be checked out. 
 ```Shell session
-cp z_patches/croot-scripts/* .
+cp z_patches/croot_scripts/* .
 ./switch_microG.sh reference
 ./switch_microG.sh default
 ./switch_microG.sh microG
